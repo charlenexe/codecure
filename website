@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[name of business]</title>
+  <!-- Google Fonts: Spectral (fallback to Times New Roman) -->
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN (for demonstration) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Spectral', 'Times New Roman', Times, serif;
+    }
+    .brand-primary {
+      color: #003366;
+    }
+    .brand-bg-primary {
+      background-color: #003366;
+    }
+    .brand-accent {
+      color: #6bbaca;
+    }
+    .brand-bg-accent {
+      background-color: #6bbaca;
+    }
+    .no-scroll {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 flex flex-col min-h-screen">
+
+  <!-- Header & Navigation -->
+  <header class="w-full shadow-sm bg-white z-20">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full brand-bg-primary flex items-center justify-center text-white text-2xl font-bold mr-3">
+          <!-- Placeholder Logo -->
+          <span>N</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight brand-primary">[name of business]</span>
+      </div>
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center space-x-8 font-semibold">
+        <li><a href="#support" class="hover:brand-accent transition">Support</a></li>
+        <li><a href="#volunteer" class="hover:brand-accent transition">Volunteer</a></li>
+        <li><a href="#about" class="hover:brand-accent transition">About Us</a></li>
+        <li>
+          <a href="#signup" class="ml-4 px-5 py-2 rounded-full brand-bg-accent text-white font-semibold shadow hover:bg-[#4db1b6] transition">Sign Up</a>
+        </li>
+      </ul>
+      <!-- Hamburger Menu (Mobile) -->
+      <button id="nav-toggle" class="md:hidden flex items-center px-2 py-1 border border-transparent rounded text-[#003366] focus:outline-none focus:ring-2 focus:ring-[#6bbaca]" aria-label="Open navigation">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="nav-toggle-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white bg-opacity-100 z-30 flex flex-col items-center justify-center space-y-8 text-2xl font-semibold brand-primary transition-transform duration-300 transform -translate-x-full">
+      <button id="nav-close" class="absolute top-6 right-6 text-4xl brand-primary focus:outline-none" aria-label="Close navigation">&times;</button>
+      <a href="#support" class="hover:brand-accent" onclick="closeMenu()">Support</a>
+      <a href="#volunteer" class="hover:brand-accent" onclick="closeMenu()">Volunteer</a>
+      <a href="#about" class="hover:brand-accent" onclick="closeMenu()">About Us</a>
+      <a href="#signup" class="px-8 py-3 rounded-full brand-bg-accent text-white shadow hover:bg-[#4db1b6]" onclick="closeMenu()">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (optional intro visual) -->
+  <section id="about" class="flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-br from-[#003366] to-[#6bbaca] text-white">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">Welcome to [name of business]</h1>
+    <p class="max-w-2xl text-lg sm:text-xl mb-8">[name and description of startup]</p>
+    <a href="#signup" class="inline-block px-8 py-3 rounded-full brand-bg-accent text-white font-semibold shadow hover:bg-[#4db1b6] transition">Get Started</a>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support" class="max-w-5xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold brand-primary text-center mb-10">Support</h2>
+    <div class="bg-white rounded-lg shadow p-8 text-lg text-gray-800">
+      <p>
+        We’re dedicated to supporting our community with resources, guidance, and a helping hand. Reach out to us for assistance, or explore our knowledge base for answers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Volunteer Section -->
+  <section id="volunteer" class="bg-gray-50 py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold brand-primary text-center mb-10">Volunteer</h2>
+      <div class="bg-white rounded-lg shadow p-8 text-lg text-gray-800">
+        <p>
+          Join our team of passionate volunteers! Make a difference by contributing your skills and energy to causes that matter. Sign up today and start creating impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="py-16 px-4 bg-white" id="testimonial">
+    <div class="max-w-2xl mx-auto text-center">
+      <svg class="mx-auto mb-4" width="48" height="48" fill="#6bbaca" viewBox="0 0 24 24">
+        <path d="M7.17 6.17a4 4 0 1 1 5.66 5.66l-1.58 1.59a1 1 0 0 0-.29.71V15a1 1 0 0 1-2 0v-1.83a3 3 0 0 1 .88-2.12l1.59-1.59a2 2 0 1 0-2.83-2.83A1 1 0 1 1 7.17 6.17z"/>
+      </svg>
+      <blockquote class="text-2xl font-semibold brand-primary mb-4">
+        “This organization truly cares and delivers. The support and opportunities I found here changed my life.”
+      </blockquote>
+      <cite class="block text-lg font-medium text-gray-700">Alex Smith, Community Volunteer</cite>
+    </div>
+  </section>
+
+  <!-- Sign Up Section -->
+  <section id="signup" class="brand-bg-primary py-16 px-4 text-white">
+    <div class="max-w-lg mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Sign Up for Updates</h2>
+      <form id="signup-form" class="space-y-6 bg-white p-8 rounded-lg shadow-md text-gray-900" novalidate>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2 brand-primary">Email Address</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6bbaca] focus:border-[#6bbaca] transition" placeholder="you@email.com">
+          <p id="email-error" class="text-red-600 text-sm mt-2 hidden">Please enter a valid email address.</p>
+        </div>
+        <button type="submit" class="w-full py-3 px-6 rounded-full brand-bg-accent text-white font-semibold shadow hover:bg-[#4db1b6] transition">Sign Up</button>
+        <p id="signup-success" class="text-[#6bbaca] text-center mt-4 hidden">Thank you for signing up!</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex space-x-4 mb-4 md:mb-0">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="brand-accent hover:brand-primary transition">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.79.35-1.63.58-2.52.69a4.29 4.29 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 11.15 11a12.16 12.16 0 0 1-8.83-4.48 4.28 4.28 0 0 0 1.32 5.71c-.71-.02-1.38-.22-1.97-.54v.05a4.29 4.29 0 0 0 3.43 4.19c-.34.09-.69.13-1.06.13-.26 0-.5-.03-.74-.07a4.28 4.28 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54a12.17 12.17 0 0 0 6.58 1.93c7.9 0 12.22-6.54 12.22-12.22 0-.19 0-.38-.01-.57A8.54 8.54 0 0 0 24 4.59a8.39 8.39 0 0 1-2.54.7z"/></svg>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="brand-accent hover:brand-primary transition">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.3h-3v-5.6c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.69h-3v-10h2.89v1.36h.04c.4-.74 1.38-1.52 2.84-1.52 3.04 0 3.6 2 3.6 4.59v5.57z"/></svg>
+        </a>
+      </div>
+      <div class="text-gray-600 text-sm">
+        &copy; 2025 [name of business]. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Responsive navigation
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navClose = document.getElementById('nav-close');
+
+    function openMenu() {
+      mobileMenu.classList.remove('-translate-x-full');
+      document.body.classList.add('no-scroll');
+    }
+    function closeMenu() {
+      mobileMenu.classList.add('-translate-x-full');
+      document.body.classList.remove('no-scroll');
+    }
+
+    navToggle.addEventListener('click', openMenu);
+    navClose.addEventListener('click', closeMenu);
+    mobileMenu.addEventListener('click', function(e) {
+      if(e.target === mobileMenu) closeMenu();
+    });
+
+    // Form Validation
+    const signupForm = document.getElementById('signup-form');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    const signupSuccess = document.getElementById('signup-success');
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailError.classList.add('hidden');
+      signupSuccess.classList.add('hidden');
+
+      const emailValue = emailInput.value.trim();
+      if(!emailValue || !validateEmail(emailValue)) {
+        emailError.classList.remove('hidden');
+        emailInput.focus();
+        return false;
+      }
+      signupSuccess.classList.remove('hidden');
+      signupForm.reset();
+      return false;
+    });
+  </script>
+</body>
+</html>
